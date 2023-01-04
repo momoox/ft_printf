@@ -18,17 +18,17 @@ static int	ft_printf_cond(va_list args, const char *str, int i)
 
 	ret = 0;
 	if (str[i] == 'c')
-		ret = ft_printf_c(str);
+		ret = ft_printf_c(args);
 	if (str[i] == 's')
-		ret = ft_printf_s(str);
+		ret = ft_printf_s(args);
 	if (str[i] == 'd' || str[i] == 'i')
-		ret = ft_printf_d_or_i(str);
+		ret = ft_printf_d_or_i(args);
 	if (str[i] == 'u')
-		ret = ft_printf_u(va_arg(args, int));
+		ret = ft_printf_u(args);
 	// if (str[i] == 'x')
 	// 	ft_printf_x(va_arg(args));
 	if (str[i] == '%')
-		ret = ft_printf_percent(va_arg(args, int));
+		ret += ft_printf_percent();
 	return (ret);
 }
 

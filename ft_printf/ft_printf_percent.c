@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	ft_printf_percent(void)
+int	ft_printf_percent(void)
 {
 	int	ret;
 

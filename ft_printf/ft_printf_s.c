@@ -14,7 +14,7 @@
 
 int	ft_printf_s(va_list args)
 {
-	int		ret;
+	int	ret;
 	char	*str;
 
 	ret = 0;

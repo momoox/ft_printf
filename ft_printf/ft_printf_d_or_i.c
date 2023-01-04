@@ -14,8 +14,8 @@
 
 int	ft_printf_d_or_i(va_list args)
 {
-	int ret;
-	char *str;
+	int 	ret;
+	char 	*str;
 	int	nbr;
 
 	ret = 0;

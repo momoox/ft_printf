@@ -15,17 +15,18 @@
 
 # include <unistd.h>
 # include <stdarg.h>
+# include <stdlib.h>
 
 int		ft_printf(const char *, ...);
 int		ft_printf_c(va_list args);
 int		ft_printf_d_or_i(va_list args);
 int		ft_printf_u(va_list args);
 int		ft_printf_s(va_list args);
-int		ft_atoi(const char *str);
-void	ft_printf_percent(va_list args);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(char *s, int fd);
-size_t	ft_strlen(const char *str);
+char		*ft_itoa(int n);
+int		ft_printf_percent(void);
+void		ft_putchar_fd(char c, int fd);
+void		ft_putnbr_fd(int n, int fd);
+void		ft_putstr_fd(char *s, int fd);
+size_t		ft_strlen(const char *str);
 
 #endif
