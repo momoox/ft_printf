@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_u.c                                      :+:      :+:    :+:   */
+/*   ft_printf_xx.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgeisler <mgeisler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/03 16:39:55 by mgeisler          #+#    #+#             */
-/*   Updated: 2023/01/05 16:44:24 by mgeisler         ###   ########.fr       */
+/*   Created: 2023/01/05 16:54:51 by mgeisler          #+#    #+#             */
+/*   Updated: 2023/01/05 16:55:40 by mgeisler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_u(va_list args)
+int	ft_putnbr_fd_xx(unsigned int n, int fd, int *ret)
 {
-	unsigned int	nbr;
-	int				ret;
-
-	ret = 0;
-	nbr = va_arg(args, unsigned int);
-	ft_putnbr_fd_u(nbr, 1, &ret);
-	return(ret);
-}
-
-int	ft_putnbr_fd_u(unsigned int n, int fd, int *ret)
-{
-	if (n < 10)
+	if (n < 16)
 	{
-		ft_putchar_fd(n + 48, fd);
+		ft_putchar_fd("0123456789ABCDEF"[n], fd);
 		(*ret)++;
-		return(n);
 	}
 	else
 	{
-		ft_putnbr_fd_u(n / 10, fd, ret);
-		ft_putnbr_fd_u(n % 10, fd, ret);
+		ft_putnbr_fd_xx(n / 16, fd, ret);
+		ft_putnbr_fd_xx(n % 16, fd, ret);
 	}
 	return(*ret);
+}
+
+int	ft_printf_xx(va_list args)
+{
+	int ret;
+	unsigned int nbr;
+
+	ret = 0;
+	nbr = va_arg(args, unsigned int);
+	ft_putnbr_fd_xx(nbr, 1, &ret);
+	return(ret);
 }

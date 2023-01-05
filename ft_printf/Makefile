@@ -1,6 +1,6 @@
 NAME = libftprintf.a
 
-SOURCES = ft_printf.c ft_printf_c.c ft_printf_d_or_i.c ft_printf_u.c ft_printf_s.c ft_itoa.c ft_printf_percent.c ft_putchar_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_strlen.c
+SOURCES = ft_printf.c ft_printf_c.c ft_printf_d_or_i.c ft_printf_u.c ft_printf_s.c ft_printf_x.c ft_printf_xx.c ft_printf_p.c ft_itoa.c ft_printf_percent.c ft_putchar_fd.c ft_putstr_fd.c ft_strlen.c
 
 OBJECTS = $(SOURCES:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: mgeisler <mgeisler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 14:05:59 by mgeisler          #+#    #+#             */
-/*   Updated: 2023/01/03 19:18:34 by mgeisler         ###   ########.fr       */
+/*   Updated: 2023/01/05 17:17:05 by mgeisler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,12 @@ static int	ft_printf_cond(va_list args, const char *str, int i)
 		ret = ft_printf_d_or_i(args);
 	if (str[i] == 'u')
 		ret = ft_printf_u(args);
-	// if (str[i] == 'x')
-	// 	ft_printf_x(va_arg(args));
+	if (str[i] == 'x')
+		ret = ft_printf_x(args);
+	if (str[i] == 'X')
+		ret = ft_printf_xx(args);
+	if (str[i] == 'p')
+		ret = ft_printf_p(args);
 	if (str[i] == '%')
 		ret += ft_printf_percent();
 	return (ret);

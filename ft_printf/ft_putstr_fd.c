@@ -6,11 +6,11 @@
 /*   By: mgeisler <mgeisler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 23:50:33 by mgeisler          #+#    #+#             */
-/*   Updated: 2022/12/09 15:45:24 by mgeisler         ###   ########.fr       */
+/*   Updated: 2023/01/05 15:00:09 by mgeisler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

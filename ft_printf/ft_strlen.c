@@ -6,11 +6,11 @@
 /*   By: mgeisler <mgeisler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 17:40:45 by mgeisler          #+#    #+#             */
-/*   Updated: 2022/11/14 21:22:52 by mgeisler         ###   ########.fr       */
+/*   Updated: 2023/01/05 15:00:17 by mgeisler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 size_t	ft_strlen(const char *str)
 {
