@@ -6,13 +6,13 @@
 /*   By: mgeisler <mgeisler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 17:40:45 by mgeisler          #+#    #+#             */
-/*   Updated: 2023/01/05 15:00:17 by mgeisler         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:51:53 by mgeisler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 

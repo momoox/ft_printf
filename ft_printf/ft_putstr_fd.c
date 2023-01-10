@@ -6,13 +6,13 @@
 /*   By: mgeisler <mgeisler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 23:50:33 by mgeisler          #+#    #+#             */
-/*   Updated: 2023/01/05 15:00:09 by mgeisler         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:36:51 by mgeisler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int *error)
 {
 	int	i;
 
@@ -21,7 +21,7 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	while (s[i] != '\0')
 	{
-		write(fd, &s[i], 1);
+		ft_putchar_fd(s[i], 1, error);
 		i++;
 	}
 }

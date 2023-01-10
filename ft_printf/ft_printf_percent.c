@@ -6,18 +6,18 @@
 /*   By: mgeisler <mgeisler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 16:35:19 by mgeisler          #+#    #+#             */
-/*   Updated: 2023/01/03 17:51:59 by mgeisler         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:36:30 by mgeisler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_percent(void)
+int	ft_printf_percent(int *error)
 {
 	int	ret;
 
 	ret = 0;
-	write(1, "%", 1);
+	ft_putchar_fd('%', 1, error);
 	ret++;
 	return (ret);
 }
