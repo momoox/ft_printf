@@ -6,7 +6,7 @@
 /*   By: mgeisler <mgeisler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 14:05:59 by mgeisler          #+#    #+#             */
-/*   Updated: 2023/01/12 23:40:08 by mgeisler         ###   ########.fr       */
+/*   Updated: 2023/01/12 23:42:11 by mgeisler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 int	ft_printf_cond(va_list args, const char *str, int *error, int i)
 {
-//faire fonctionner le error sans le mettre en argu printf_cond
 	int	*ptr;
-	int count;
+	int	count;
 
 	count = 0;
 	ptr = &count;
@@ -46,7 +45,7 @@ int	ft_printf(const char *str, ...)
 {
 	int		i;
 	int		error;
-	int 	*ptr;
+	int		*ptr;
 	int		count;
 	va_list	args;
 
