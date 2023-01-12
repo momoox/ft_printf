@@ -6,7 +6,7 @@
 /*   By: mgeisler <mgeisler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 14:05:59 by mgeisler          #+#    #+#             */
-/*   Updated: 2023/01/12 23:53:07 by mgeisler         ###   ########.fr       */
+/*   Updated: 2023/01/13 00:04:25 by mgeisler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,6 @@ int	ft_printf(const char *str, ...)
 	error = 0;
 	count = 0;
 	ptr = &count;
-	if (!str[i])
-		return (0);
 	while (str[i])
 	{
 		if (str[i] != '%')
