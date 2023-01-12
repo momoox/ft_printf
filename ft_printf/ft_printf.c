@@ -6,7 +6,7 @@
 /*   By: mgeisler <mgeisler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 14:05:59 by mgeisler          #+#    #+#             */
-/*   Updated: 2023/01/12 23:42:11 by mgeisler         ###   ########.fr       */
+/*   Updated: 2023/01/12 23:53:07 by mgeisler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ int	ft_printf_cond(va_list args, const char *str, int *error, int i)
 
 int	ft_printf(const char *str, ...)
 {
+	va_list	args;
 	int		i;
 	int		error;
 	int		*ptr;
 	int		count;
-	va_list	args;
 
 	va_start(args, str);
 	i = 0;
@@ -59,15 +59,11 @@ int	ft_printf(const char *str, ...)
 	while (str[i])
 	{
 		if (str[i] != '%')
-		{
-			ft_putchar_fd(str[i], 1, &error, ptr);
-			i++;
-		}
+			ft_putchar_fd(str[i++], 1, &error, ptr);
 		if (str[i] == '%')
 		{
 			i++;
-			count += ft_printf_cond(args, str, &error, i);
-			i++;
+			count += ft_printf_cond(args, str, &error, i++);
 		}
 	}
 	va_end(args);
