@@ -6,14 +6,20 @@
 /*   By: mgeisler <mgeisler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 14:05:59 by mgeisler          #+#    #+#             */
-/*   Updated: 2023/01/12 23:02:54 by mgeisler         ###   ########.fr       */
+/*   Updated: 2023/01/12 23:40:08 by mgeisler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_printf_cond(va_list args, const char *str, int i, int *error, int *ptr)
+int	ft_printf_cond(va_list args, const char *str, int *error, int i)
 {
+//faire fonctionner le error sans le mettre en argu printf_cond
+	int	*ptr;
+	int count;
+
+	count = 0;
+	ptr = &count;
 	if (str[i] == 'c')
 		ft_putchar_fd((char)va_arg(args, char *), 1, error, ptr);
 	if (str[i] == 's')
@@ -33,7 +39,7 @@ static int	ft_printf_cond(va_list args, const char *str, int i, int *error, int 
 	}
 	if (str[i] == '%')
 		ft_putchar_fd('%', 1, error, ptr);
-	return (0);
+	return (count);
 }
 
 int	ft_printf(const char *str, ...)
@@ -61,7 +67,7 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			i++;
-			ft_printf_cond(args, str, i, &error, ptr);
+			count += ft_printf_cond(args, str, &error, i);
 			i++;
 		}
 	}

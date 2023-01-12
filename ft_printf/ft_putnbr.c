@@ -6,7 +6,7 @@
 /*   By: mgeisler <mgeisler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 22:48:31 by mgeisler          #+#    #+#             */
-/*   Updated: 2023/01/12 23:01:25 by mgeisler         ###   ########.fr       */
+/*   Updated: 2023/01/12 23:07:41 by mgeisler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_control(int n, int fd, int *error, int *ptr)
 int	ft_putnbr(int n, int fd, int *error, int *ptr)
 {
 	char	tab[20];
-	int 	count;
+	int		count;
 	int		mod;
 	int 	control;
 
